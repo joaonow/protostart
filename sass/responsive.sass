@@ -1,0 +1,262 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)
+
+  #veranstaltungen
+    h2
+      margin-bottom: 80px
+      font-size: 32px
+    svg
+      width: 565px
+      top: 0
+  #legal
+    flex-direction: row
+  
+  /****************
+    Seite: Methoden
+  #methoden
+    .container
+      flex-direction: row
+      flex-wrap: wrap
+
+  .methode
+    width: 48%
+    &:nth-of-type(2n)
+      margin-left: 4%
+  #cta.container
+    padding: 0
+
+@media (min-width: 584px)
+  .logged-in
+    nav
+      top: 46px
+@media (min-width: 765px)
+  .logged-in
+    nav
+      top: 32px
+
+      
+      
+      
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+  /**************
+    Beschreibung
+
+  #beschreibung
+    h1
+      font-size: 40px
+
+  /**************
+    Referenzen
+
+  #brands
+    flex-direction: row
+    flex-wrap: wrap
+    width: 66.666666667%
+    margin: 60px 16.66666667%
+
+  .brand-container
+    width: 20%
+
+  .testa-img
+    width: 100%
+    margin: 0 0 20px
+
+  /**************
+    DTP
+  #dtp
+    padding: 0
+    h2
+      font-size: 50px
+    #moving-line
+      max-height: 73%
+    .row
+      margin: 0 25px
+
+  #grafik
+    .circle
+      height: 150px
+      width: 150px
+      font-size: 19px
+
+  #grafik
+    .square
+      height: 400px
+      width: 400px
+
+  .step-2, .step-4
+    margin-left: 25px
+    
+  .step-4 
+    top: -70px
+
+  #grafik
+    #arrow
+      width: 50px
+      
+  /**************
+    Seite: Methoden
+
+  .methode
+    width: 30.3333333%
+    &:nth-of-type(n+2)
+      margin-left: 4.5%
+    &:nth-of-type(3n+1)
+      margin-left: 0
+  #cta
+    a
+      width: auto
+      
+  /**************
+    Seite: Kontakt
+
+  #kontakt
+    h1
+      width: 70%
+      margin: 0 auto 40px
+    form
+      width: 60%
+      margin: 0 auto 40px
+      
+  /***********
+   Seite: Formate
+
+  #formate
+    .container
+      flex-direction: row
+      flex-wrap: wrap
+    
+  .format
+    width: 48%
+    &:nth-of-type(2n)
+      margin-left: 4%
+    
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)
+  
+  #wowshow
+    max-width: 880px
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+
+  .banner-text
+    padding-top: 55px
+
+  #beschreibung
+    svg
+      margin-bottom: -40px
+
+  /***********
+    DTP
+  #grafik
+    .row:first-of-type
+      margin-bottom: 222px
+
+    #stp-1-img
+      width: 40%
+      padding-bottom: 40%
+
+    #stp-2-img
+      top: 15%
+      width: 35%
+      padding-bottom: 35%
+
+    #stp-3-img
+      top: 41%
+      width: 32%
+      padding-bottom: 32%
+
+    #stp-4-img
+      top: 58%
+      width: 27%
+      padding-bottom: 27%
+      left: 87%
+
+    #stp-5-img
+      top: 76%
+      width: 22%
+      padding-bottom: 22%
+      left: 26%
+      
+  /**************
+    Seite: Methoden
+  #methoden
+    .container
+      width: 90%
+    
+  .methode
+    width: 20%
+    &:nth-of-type(n+2)
+      margin-left: 6.666667%
+    &:nth-of-type(4n+1)
+      margin-left: 0
+      
+  /***********
+   Seite: Formate
+
+  #formate
+    .container
+      justify-content: center
+    
+  .format
+    width: 31.3333333%
+    &:nth-of-type(1n+2)
+      margin-left: 3%
+    &:nth-of-type(3n+1)
+      margin-left: 0
+
+@media (min-width: 1360px)
+  /**************
+    Veranstaltungen
+  #wowshow
+    width: 1360px
+    max-width: none
+    ol
+      left: 480px
+
+@media (min-width: 1600px)
+  /***********
+    DTP
+  #grafik
+
+    #moving-line
+      max-height: 77%
+
+    #stp-1-img
+      width: 700px
+      height: 700px
+      padding-bottom: 0
+
+    #stp-2-img
+      top: 16%
+      left: 93%
+      width: 600px
+      height: 600px
+      padding-bottom: 0
+
+    .row-2
+      margin-bottom: 180px
+
+    #stp-3-img
+      top: 40%
+      width: 580px
+      height: 580px
+      padding-bottom: 0
+
+    #stp-4-img
+      top: 55%
+      width: 500px
+      height: 500px
+      padding-bottom: 0
+
+    #stp-5-img
+      top: 77%
+      width: 380px
+      height: 380px
+      padding-bottom: 0

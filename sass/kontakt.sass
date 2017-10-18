@@ -1,0 +1,64 @@
+.page-template-page-kontakt
+  .jumbotron
+    min-height: 60vh
+    
+#kontakt
+  h1
+    +heading
+    color: #73b72b
+    border-bottom: 3px solid #008b3e
+    padding-bottom: 20px
+    margin-bottom: 40px
+    
+  .alert
+    margin: 20px auto
+    
+  form
+    background-color: #e3e3e3
+    padding: 20px
+  
+    input, textarea, button
+      display: block
+      width: 100%
+      margin: 10px auto
+      background: white
+      color: black
+      border: none
+      padding: 5px
+  
+    textarea
+      margin-top: 20px
+      
+    button
+      +heading
+    .clickable
+      &:hover, &:focus
+        cursor: pointer
+      
+    
+
+#rechtliches
+  margin: 20px 0
+  
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+  
+  #kontakt
+    .alert
+      width: 70%
+  
+  #rechtliches
+    display: flex
+    br
+      margin-bottom: 10px
+    
+  .impressum
+    width: 49%
+    margin-right: 2%
+    text-align: right
+    
+  .agbs
+    width: 49%
+    
+
+    

@@ -1,0 +1,115 @@
+.post-template-veranstaltungen
+  .jumbotron
+    min-height: 60vh
+
+.post-template-blogpost
+  .jumbotron
+    min-height: 60vh
+  
+#veranstaltung
+  width: 100%
+  background-color: #f39008 
+  padding: 40px
+  color: white
+  text-align: left
+  height: auto
+  
+  h2
+    +extra-heading
+    text-align: left
+    margin: 0 0 10px
+    font-size: 24px
+  .name
+    color: black
+  h3
+    text-align: left
+    font-size: 16px
+    text-transform: uppercase
+    margin-bottom: 10px
+  
+    
+#main-area
+  #veranstaltung
+    br
+      margin-bottom: 0  
+      
+#image-container
+  width: 100%
+  height: 262px
+  margin-top: 30px
+  background:
+    position: center center
+    size: cover
+    repeat: no-repeat
+
+      
+#main-area   
+  h1
+    +heading
+    margin: 30px 0
+    text-align: center
+    color:  #f39008
+  br
+    margin-bottom: 10px
+
+#sidebar
+  border-top: 3px solid #f09025
+  border-left: 3px solid #f09025
+  
+  .logo
+    width: 80%
+    margin: 20px auto
+    display: block
+    
+  h2
+    font-size: 18px
+  
+  p
+    width: 80%
+    margin: 0 auto
+    
+    br
+    margin-bottom: 10px
+  
+  .mail, .call, .linkedin, .facebook
+    margin: 40px 0
+  
+  .contact-item
+    height: 85px
+    width: 85px
+    span
+      width: 45px
+      height: 45px
+      
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+  
+  #veranstaltung
+    height: 262px
+  
+//Media Queries
+// Large devices (tablets, 768px and up)
+@media (min-width: 992px)
+  
+  #two-column-layout
+    display: flex
+    width: 90%
+    margin: 0 auto
+    
+  #main-area
+    width: 76%
+    margin-right: 2%
+    h1
+      text-align: left
+  #double-row
+    display: flex
+    
+  #veranstaltung
+    width: 49%
+    
+  #image-container
+    width: 49%
+    margin: 0 0 0 2%
+    
+  #sidebar
+    width: 22%

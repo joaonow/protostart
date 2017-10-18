@@ -1,0 +1,136 @@
+.page-template-page-methoden
+  .jumbotron
+    min-height: 60vh
+    
+
+#methoden
+  h1
+    +heading
+    color: #0069b4
+    text-align: center
+    width: 90%
+    margin: 20px auto
+
+  .container
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    
+#border-line
+  width: 100%
+  display: block
+  border-top: 3px solid #f39008
+  padding-bottom: 80px
+
+.methode
+  width: 100%
+  margin-bottom: 40px
+  
+  a
+    color: #292b2c
+    &:hover, &:focus
+      text-decoration: none
+      color: #292b2c
+  
+  .wow-box
+    width: 100%
+    height: 0
+    padding-bottom: 100%
+    position: relative
+    margin: 0 auto 20px
+
+    .aspect-center
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 20px
+      
+      &:hover, &:focus
+        text-decoration: none
+
+      h2
+        +extra-heading
+        color:  white
+    p
+      text-align: left
+
+  &:nth-of-type(1)
+    .wow-box
+      background-color: #f7de00
+  &:nth-of-type(2)
+    .wow-box
+      background-color: #f39008
+  &:nth-of-type(3)
+    .wow-box
+      background-color: #e95123
+  &:nth-of-type(4)
+    .wow-box
+      background-color: #e02930
+  &:nth-of-type(5)
+    .wow-box
+      background-color: #73b72b
+  &:nth-of-type(6)
+    .wow-box
+      background-color: #008b3e
+  &:nth-of-type(7)
+    .wow-box
+      background-color: #0069b4
+  &:nth-of-type(8)
+    .wow-box
+      background-color: #00a2df
+  &:nth-of-type(9)
+    .wow-box
+      background-color: #e60f54
+  &:nth-of-type(10)
+    .wow-box
+      background-color: #772684
+  &:nth-of-type(11)
+    .wow-box
+      background-color: #f7de00
+  &:nth-of-type(12)
+    .wow-box
+      background-color: #f39008
+  &:nth-of-type(13)
+    .wow-box
+      background-color: #e95123
+  &:nth-of-type(14)
+    .wow-box
+      background-color: #e02930
+  &:nth-of-type(15)
+    .wow-box
+      background-color: #73b72b
+  &:nth-of-type(16)
+    .wow-box
+      background-color: #008b3e
+  &:nth-of-type(17)
+    .wow-box
+      background-color: #0069b4
+  &:nth-of-type(18)
+    .wow-box
+      background-color: #00a2df
+  &:nth-of-type(19)
+    .wow-box
+      background-color: #e60f54
+  &:nth-of-type(20)
+    .wow-box
+      background-color: #772684 
+           
+#cta
+  text-align: center
+  margin: 30px auto
+  clear: both
+  p
+    max-width: 444px
+    width: 100%
+    margin: 0 auto
+  a
+    +button(#f39008)
+    color: #e95123
+    font-size: 28px
+  
+        

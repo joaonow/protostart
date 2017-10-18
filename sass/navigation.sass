@@ -1,0 +1,214 @@
+/********
+    Navigation
+.logged-in
+  nav
+    top: 46px
+  
+nav
+  position: fixed
+  top: 0
+  z-index: 10
+  width: 100%
+  background-color: #fff
+  left: 0
+
+.nav-container
+  width: 90%
+  margin: 0 auto
+
+#menu-bar
+  position: relative
+  z-index: 12
+  width: 100%
+  background-color: #fff
+  .nav-container
+    display: flex
+    flex-direction: row
+    align-items: center
+    a
+      margin-left: auto
+
+#logo
+  width: 111px
+
+.trigger
+  width: 25px
+  height: auto
+  margin-left: auto
+  &:hover
+    cursor: pointer
+
+#collapse.open
+  transform: translateY(0)
+
+#collapse
+  position: absolute
+  z-index: 11
+  transform: translateY(-100%)
+  width: 100%
+  left: 0
+  background-color: #fff
+  transition: all 0.3s ease-in-out
+  ul
+    margin: 0
+    padding: 0 5%
+    list-style: none
+    text-align: left
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    li
+      text-transform: uppercase
+      font-weight: 500
+
+      a
+        padding: 10px 0
+        display: block
+        text-decoration: none
+        color: black
+        &:hover, &:focus, &.active
+          text-decoration: none
+          color: black
+          background-color: transparentize( #555, 0.9)
+        span
+          padding-left: 10px
+          
+        
+.menu-item-has-children
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  a
+    flex-grow: 1
+  
+        
+.sub-trigger
+  align-self: center
+  transition: all .2s ease-in-out
+  align-self: stretch
+  display: flex
+  justify-content: center
+  flex-direction: column
+  width: 5%
+  min-width: 28px
+  align-items: center
+  &:hover
+    cursor: pointer
+  &.open
+    transform: rotate(180deg)
+  span
+    background: url('icons/arrow-down.svg') no-repeat
+    width: 22px
+    height: 14px
+    display: block
+    
+#collapse
+  .sub-menu
+    order: 1
+    width: 100%
+    max-height: 0
+    padding-right: 0
+    overflow: hidden
+    transition: max-height 0.3s ease-in-out
+    &.open
+      max-height: 100vh
+    a
+      flex-grow: 0
+    span
+      display: inline-block
+    
+        
+#overlay
+  position: fixed
+  z-index: -10
+  width: 100%
+  height: 100%
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background-color: #000
+  opacity: 0
+  transition: opacity 0.3s ease-in-out, z-index 0s 1s
+
+#overlay.show
+  z-index: 5
+  opacity: 0.8
+  transition: opacity 0.3s ease-in-out, z-index 0s
+  
+
+@media (min-width: 768px)
+  /**************
+    Navigation
+  nav
+    background-color: rgba(255, 255, 255, 0.9)
+    padding: 0 5%
+    display: flex
+    align-items: center
+
+  .nav-container
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+
+  #menu-bar
+    width: 200px
+    display: inline-flex
+    background-color: transparent
+    a
+      margin: 0 0 10px 0
+
+  #logo
+    transform: translateX(0)
+    width: 152px
+
+  .trigger
+    display: none
+
+  #collapse
+    width: 100%
+    position: initial
+    background-color: transparent
+    transform: none
+
+    ul
+      flex-direction: row
+      justify-content: flex-start
+      
+      li
+        padding: 0 5px
+        &:hover, &:focus
+          background-color: transparentize( #555, 0.9)
+          ul
+            display: flex
+            flex-direction: column
+            background-color: rgba(255, 255, 255, 0.9)
+        a
+          padding: 10px
+          &:hover, &:focus, &.active
+            background: none
+          span
+            padding-left: 0
+    .sub-menu
+      height: initial
+      width: initial
+      max-height: initial
+      display: none
+      position: absolute
+      background: white
+      margin-left: -5px
+      padding: 0
+      li
+        padding-left: 5px
+          
+    .menu-item-has-children
+      display: block
+  
+    
+      
+  .sub-trigger
+    display: none;
+    
+  #overlay
+    display: none

@@ -1,0 +1,673 @@
+/*
+    Theme Name: Protostart Custom Theme
+    Author: Joao
+    Author URI: http://officialjoao.com
+    Description: ...
+    Version: 1.0
+    License: private 
+
+@import "https://fonts.googleapis.com/css?family=News+Cycle|Oswald|Roboto:300"
+@import "bootstrap.scss" 
+
+
+/***** Font Styles
+
+=heading
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  letter-spacing: 2px
+  text-transform: uppercase
+
+=running-text
+  font-family: 'News Cycle', sans-serif
+  font-weight: 400
+
+=extra-heading
+  font-family: 'Oswald', sans-serif
+  font-weight: 400
+  text-transform: uppercase
+
+h1
+  +heading
+
+h2, h3
+  +heading
+  text-align: center
+  margin: 20px 0
+
+h2
+  text-transform: uppercase
+
+p, a
+  +running-text
+
+a.button
+  +heading
+  
+/***** Alignments
+
+.alignleft
+	display: inline
+	float: left
+	margin-right: 1.5em
+    max-width: 100%
+    height: auto
+
+.alignright
+	display: inline
+	float: right
+	margin-left: 1.5em
+    max-width: 100%
+    height: auto
+
+.aligncenter
+	clear: both
+	display: block
+	margin-left: auto
+	margin-right: auto
+    max-width: 100%
+    height: auto
+
+/***** Buttons
+
+=button($color)
+  display: inline-block
+  width: 100%
+  margin: 20px 0
+  text-align: center
+  padding: 10px 80px
+  border: 3px solid $color
+  color: $color
+  text-transform: uppercase
+  &:hover, &:focus
+    background-color: $color
+    color: #fff
+    text-decoration: none
+  
+  
+
+@import "navigation.sass"
+
+/* Jumbotron
+.page-template-page-startseite
+  .jumbotron
+    min-height: 100vh
+    
+.jumbotron
+  min-height: 60vh
+  position: relative
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+
+#proto-education-logo
+  height: 40%
+  position: absolute
+  top: 30%
+  right: 0
+
+.banner-text
+  position: absolute
+  display: flex
+  bottom: 15%
+  left: 5%
+  width: 90%
+  padding: 40px 20px
+  background: rgba(255, 255, 255, 0.8)
+  p
+    margin-bottom: 0
+
+#three-circles
+  position: absolute
+  left: 11px
+  top: 5px
+  height: 80%
+
+#two-circles
+  position: absolute
+  width: 40px
+  right: 15px
+  bottom: 4px
+
+/*****************
+  Slideshow
+#veranstaltungen
+  margin: 40px 0
+  position: relative
+  h2
+    +heading
+    padding: 10px 0
+    color: #0069B4
+    font-size: 25px
+    margin-bottom: 50px
+  svg
+    position: absolute
+    top: 54px
+    width: 90%
+    left: 50%
+    transform: translateX(-50%)
+    z-index: -1
+  a
+    &:hover, &:focus
+      text-decoration: none
+
+#wowshow
+  background-color: white
+  height: 340px
+  margin: 100px 0
+  position: relative
+  overflow: hidden
+  width: 90%
+  max-width: 400px
+  margin: 0 auto
+
+  ol
+    margin: 0
+    padding: 0
+    list-style: none
+    position: absolute
+    width: 10000%
+    left: 0
+    display: flex
+    align-items: stretch
+    transition: left 0.2s ease-in-out
+
+  li
+    display: inline-block
+    margin-right: 80px
+
+
+.wow-slide
+  background: #7ab538
+  padding: 20px
+  width: 400px
+  text-transform: uppercase
+
+  h3
+    +extra-heading
+    text-align: left
+    color: #fff
+    margin-top: 0
+    line-height: 35px
+    margin-bottom: 5px
+    font-size: 23px
+
+  h4
+    color: #fff
+    font-size: 12px
+    margin-bottom: 10px
+  .name
+    color: #000
+    font-weight: bold
+  .address
+    margin-bottom: 0
+
+  &:nth-child(3n+2)
+    background-color: #F39008
+  &:nth-child(3n+3)
+    background-color: #0069B4
+
+.controls
+  display: flex
+  justify-content: space-around
+  align-items: center
+  max-width: 360px
+  width: 100%
+  margin: 0 auto
+  position: relative
+  margin-bottom: 25px
+
+#date
+  font-size: 40px
+  margin: 0 40px
+  text-transform: uppercase
+  color: #0069B4
+
+.wow-prev-icon, .wow-next-icon
+  width: 30px
+  height: 30px
+  background-repeat: no-repeat
+  display: block
+  &:hover, &:focus
+    cursor: pointer
+
+.wow-next-icon
+  background-image: url('icons/arrow-right.svg')
+  right: 10%
+
+.wow-prev-icon
+  background-image: url('icons/arrow-left.svg')
+
+
+/**************
+  Beschreibung
+
+#beschreibung
+  margin: 40px 0
+  text-align: center
+  
+  br
+    margin-bottom: 10px
+
+  h1
+    +heading
+    color: #F39008
+    font-size: 30px
+
+  svg
+    margin-bottom: -20px
+
+  p
+    padding: 0 20px
+    margin-bottom: 40px
+
+.button
+  display: block
+  width: 100%
+  margin: 20px 0
+  text-align: center
+  padding: 20px 0
+  border: 3px solid #F39008
+  color: #F39008
+  text-transform: uppercase
+  font-size: 20px
+
+  &:hover, &:focus
+    background-color: #F39008
+    color: #fff
+    text-decoration: none
+
+.red
+  border: 3px solid #E02930
+  color: #E02930
+
+  &:hover, &:focus
+    background-color: #E02930
+    color: #fff
+
+/**************
+  Referenzen
+
+#referenzen
+  margin: 80px 0
+  .row
+    padding: 0 15px
+  .col-md-8.offset-md-2
+    border-top: 3px solid #FFE90A
+  h2
+    +heading
+    color: #F39008
+    font-weight: 400
+
+#brands
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  width: 100%
+  margin: 60px auto
+
+.brand-container
+  width: 50%
+  height: 222px
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-right: 10px
+  &:nth-of-type(2)
+    padding-left: 10px
+    padding-right: 0
+
+  img
+    max-width: 100%
+    max-height: 100%
+
+.testa-img
+  width: 80%
+  height: auto
+  display: block
+  border-radius: 100%
+  margin: 40px auto 20px
+
+.testa-text
+  display: flex
+  flex-direction: column
+  p
+    margin: 0 20px
+    text-align: justify
+  .right
+    align-self: flex-end
+.quotation
+  width: 20px
+  height: auto
+
+/*****************
+  Design Thinking Process
+#dtp
+
+  .first
+    border-top: 3px solid #772684
+  h2
+    +heading
+    margin: 40px 0
+    color: #0069b4
+
+  .row
+    padding: 0 15px
+
+/*****************
+  grafik
+#dtp
+  overflow: hidden
+#grafik
+  position: relative
+
+  #moving-line
+    z-index: -1
+    width: 7px
+    background-color: black
+    position: absolute
+    height: 0px
+    max-height: 67%
+    top: 69px
+    left: 50%
+    transform: translateX(-50%)
+
+  #verstaendnis
+    background-color: #e60f54
+
+  .circle, .square
+    +extra-heading
+    color: white
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .circle
+    height: 80px
+    width: 80px
+    border-radius: 100%
+    background-color: #f39008
+    margin: 30px auto
+    font-size: 11px
+    font-weight: bold
+    transform: scale(0)
+    transition: all .2s ease-in-out
+
+  .square
+    position: relative
+    height: 200px
+    width: 200px
+    background-color: #fff
+    border: dotted 7px black
+    transform: rotate(45deg) scale(0)
+    transition: all .3s ease-in-out
+    margin: 80px auto
+    .circle
+      position: relative
+      z-index: 3
+      transform: rotate(-45deg)
+
+  #verstaendnis.on
+    transform: scale(1)
+
+  #erkundung
+    svg
+      position: absolute
+      transform: rotate(-45deg) scale(0)
+      transition: all .2s ease-in-out .2s
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+
+    .circle
+      background-color: #00a2df
+
+  #erkundung.on
+    transform: rotate(45deg) scale(1)
+    svg
+      transform: rotate(-45deg) scale(1)
+
+  #synthese
+    margin-top: 0
+    background-color: #73b72b
+
+  #synthese.on
+    transform: scale(1)
+
+  #ideen
+    svg
+      position: absolute
+      transform: rotate(-45deg)
+      top: -2%
+      left: -5%
+      transition: all .2s ease-in-out .2s
+
+  #ideen.on
+    transform: rotate(45deg) scale(1)
+    svg
+      transform: rotate(-45deg) scale(1)
+
+  #prototyp
+    margin-top: 0
+    background-color: #e95123
+
+  #prototyp.on
+    transform: scale(1)
+
+  #arrow
+    width: 40px
+    margin: 0 auto
+    display: block
+    transform: translateY(-100%)
+    opacity: 0
+    transition: all 0.35s ease-in-out
+
+  #arrow.on
+    transform: translateY(0)
+    opacity: 1
+
+  #test
+    background-color: #772684
+    margin-top: 30px
+
+  #test.on
+    transform: scale(1)
+
+  .mood-image
+    display: block
+    border-radius: 100%
+    position: absolute
+    transform: translateX(-50%)
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+
+  #stp-1-img
+    left: 10%
+    top: 0
+    width: 50%
+    padding-bottom: 50%
+
+  #stp-2-img
+    left: 96%
+    top: 19%
+    width: 44%
+    padding-bottom: 44%
+
+  #stp-3-img
+    top: 39%
+    left: 14%
+    width: 42%
+    padding-bottom: 42%
+
+  #stp-4-img
+    top: 58%
+    width: 36%
+    padding-bottom: 36%
+    left: 87%
+
+  #stp-5-img
+    top: 76%
+    width: 30%
+    padding-bottom: 30%
+    left: 22%
+
+
+.step
+  background-color: #fff
+  h3
+    +heading
+  br
+    margin-bottom: 10px
+
+.step-3
+  border-top: 2px solid #008b3e
+  border-right: 2px solid #008b3e
+
+.step-4
+  border-top: 2px solid #f09025
+  border-left: 2px solid #f09025
+
+#red-circle
+  position: absolute
+  width: 30px
+  height: 30px
+  background-color: #e21d57
+  border-radius: 100%
+  right: 0
+
+.step-6
+  padding-left: 40px
+  svg
+    position: absolute
+    left: 0
+    top: -41px
+    height: 80%
+    z-index: 5
+
+#grafik
+  .row:last-of-type
+    margin-bottom: 40px
+
+#endtext
+  border-top: 3px solid #F09025
+  padding: 0 0 40px 0
+  
+  br
+    margin-bottom: 10px
+
+  h3
+    +heading
+    margin: 40px 0 20px
+    color: #E95123
+    font-size: 32px
+  p
+    text-align: center
+
+
+/*****************
+  Contact Icons
+
+#contact-icons
+  max-width: 90%
+  
+  h2
+    +heading
+ 
+    
+.page-template-page-startseite
+  #contact-icons
+    .row
+      border-bottom: 3px solid #009FE3
+      padding-bottom: 40px
+
+.mail, .call, .facebook,.linkedin
+  margin: 20px 0
+  span
+    display: inline-block
+    width: 50px
+    height: 50px
+    background-size: contain
+  h3
+    font-size: 18px
+    text-transform: lowercase
+
+.contact-item
+  margin: 20px auto
+  height: 100px
+  width: 100px
+  border-radius: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  
+.call, .mail, .facebook, .linkedin
+  a
+    color: black
+    display: block
+
+.call
+  a
+    &:hover, &:focus
+      color: #F09025
+  .contact-item
+    background-color: #F09025
+  span
+    background: url("icons/phone-icon.svg") center center no-repeat
+
+.mail
+  a
+    &:hover, &:focus
+      color: #7AB538
+  .contact-item
+    background-color: #7AB538
+  span
+    width: 60px
+    height: 60px
+    background: url("icons/mail-icon.svg") center center no-repeat
+
+.facebook
+  a
+    &:hover, &:focus
+      color: #00A3E0
+  .contact-item
+    background-color: #00A3E0
+  span
+    background: url("icons/facebook-icon.svg") center center no-repeat
+
+.linkedin
+  a
+    &:hover, &:focus
+      color: #0069B4
+  .contact-item
+    background-color: #0069B4
+  span
+    background: url("icons/linkedin-icon.svg") center center no-repeat
+    
+#legal
+  display: flex
+  justify-content: center
+  flex-direction: column
+  
+
+#impressum, #datenschutz
+  display: block
+  text-align: center
+  margin: 20px 40px
+  text-transform: uppercase
+  color: black
+  
+  &:hover, &:focus
+    text-decoration: none
+    color: #808080
+
+@import "methoden.sass"
+@import "kontakt.sass"
+@import "formate.sass"
+@import "blog.sass"
+@import "category.sass"
+@import "widgets.scss"
+@import "404.sass"
+@import "responsive.sass"
